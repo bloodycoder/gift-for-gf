@@ -68,9 +68,9 @@ class application:
         if(self.method == 'GET'):
             return self.getTemplate('welcome01.html',{'error':' '})
         elif(self.method == 'POST'):
-            postInfo = self.getPost(['phonenum'])
-            phoneNum = postInfo[0]
-            if(phoneNum == '13122152186'):
+            postInfo = self.getPost(['nickname'])
+            nickname = postInfo[0]
+            if(len(nickname)>=6 and (nickname.find("pig")!=-1 or nickname.find("zhu")!=-1)):
                 return self.getTemplate('successPage.html',{
                     'link':'<a href="/ballweight/" target="_blank" rel="noopener noreferrer">Next Problem</a>',
                     'successWords':'<h3 id="my-hobbies:6083a88ee3411b0d17ce02d738f69d47">Congratulations</h3> \
@@ -102,14 +102,15 @@ class application:
         if(self.method == 'GET'):
             return self.getTemplate('problem2.html',{'error':' '})
         elif(self.method == 'POST'):
-            postInfo = self.getPost(['peopleCnt'])
-            peopleCnt = postInfo[0]
+            postInfo = self.getPost(['bookUnread','fruits','times','forever'])
+            bookUnread = postInfo[0]
+            forever = postInfo[3]
             errorPage = self.getTemplate('problem2.html',{'error':'<p style="color: #F5222D;">oops,please try again</p>'})
-            if(peopleCnt == '5'):
+            if(bookUnread.find("monde")!='-1' and forever.find("forever")!='-1'):
                 return self.getTemplate('successPage.html',{
                         'link':'<a href="/poem/" target="_blank" rel="noopener noreferrer">Next Problem</a>',
                         'successWords':'<h3 id="my-hobbies:6083a88ee3411b0d17ce02d738f69d47">Congratulations</h3> \
-                        <p>You are really brilliant! It is easy to get your gift. </p> \
+                        <p>You are really brilliant! I Love you. </p> \
                         <p>click the linked above to continue.</p>'
                         })
             return errorPage
