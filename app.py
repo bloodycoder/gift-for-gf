@@ -52,7 +52,7 @@ class application:
                 return -1
             ans = []
             for item in itemList:
-                ans.append(d.get(item,[])[0].strip())
+                ans.append(d.get(item,[])[0].strip().lower())
             return ans
     """
     *********************************************
