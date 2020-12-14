@@ -123,7 +123,7 @@ class application:
             errorPage = self.getTemplate('problem3.html',{'error':'<p style="color: #F5222D;">oops,please try again</p>'})
             if(poem.find('forever')!=-1 and poem.find('world')!=-1 and poem.find('moon')!=-1):
                 return self.getTemplate('successPage.html',{
-                        'link':'<a href="https://www.yuque.com/docs/share/7a63076e-56fe-4a8c-b025-4eee68626333" target="_blank" rel="noopener noreferrer">How to get Gift</a>',
+                        'link':'<a href="http://xylovesunx.xyz/" target="_blank" rel="noopener noreferrer">How to get Gift</a>',
                         'successWords':'<h3 id="my-hobbies:6083a88ee3411b0d17ce02d738f69d47">Congratulations</h3> \
                         <p>You are really brilliant!You pass the final exam. It is easy to get your gift. </p> \
                         <p>click the linked above to get your gift.</p>'
